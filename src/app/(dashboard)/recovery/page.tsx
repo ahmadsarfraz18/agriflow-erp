@@ -1,6 +1,8 @@
 import { findDealers, findInvoices, findPayments, getRecoveryAgingBuckets } from '@/db/queries';
 import { RecoveryClient } from '@/components/recovery-client';
 
+export const dynamic = 'force-dynamic';
+
 export default async function RecoveryPage() {
   const [dealers, unpaidInvoices, recentPayments, agingBuckets] = await Promise.all([
     findDealers(),

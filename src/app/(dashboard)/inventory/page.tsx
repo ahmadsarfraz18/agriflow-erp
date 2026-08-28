@@ -1,6 +1,8 @@
 import { findProducts, findBatches } from '@/db/queries';
 import { InventoryClient } from '@/components/inventory-client';
 
+export const dynamic = 'force-dynamic';
+
 export default async function InventoryPage() {
   const [products, batches] = await Promise.all([findProducts(), findBatches()]);
 

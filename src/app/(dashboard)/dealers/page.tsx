@@ -1,6 +1,8 @@
 import { findDealers, findInvoices } from '@/db/queries';
 import { DealersClient } from '@/components/dealers-client';
 
+export const dynamic = 'force-dynamic';
+
 export default async function DealersPage() {
   const [dealers, invoices] = await Promise.all([findDealers(), findInvoices()]);
 

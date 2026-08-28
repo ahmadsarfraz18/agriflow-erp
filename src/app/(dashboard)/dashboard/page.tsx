@@ -4,6 +4,8 @@ import { eq, desc, sql } from 'drizzle-orm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
+export const dynamic = 'force-dynamic';
+
 export default async function DashboardPage() {
   const today = new Date().toISOString().split('T')[0];
   const in60Days = new Date();
